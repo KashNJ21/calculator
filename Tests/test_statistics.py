@@ -23,6 +23,12 @@ class MyTestCase(unittest.TestCase):
            self.assertEqual(self.statistics.median(row['Value 1'], row['Value 2'], row['Value 3']), result)
            self.assertEqual(self.statistics.result, result)
 
+    def test_mode(self):
+        test_data = CsvReader("Tests/Data/mode.csv").data
+        for row in test_data:
+           result = [float(row['Result'])]
+           self.assertAlmostEqual(self.statistics.mode(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4']), result)
+           self.assertAlmostEqual(self.statistics.result, result)
 
     def test_results_property(self):
         self.assertEqual(self.statistics.result, 0)
