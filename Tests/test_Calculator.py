@@ -52,6 +52,7 @@ class MyTestCase(unittest.TestCase):
             self.assertAlmostEqual(self.calculator.squareroot(row['Value 1']), result)
             self.assertAlmostEqual(self.calculator.result, result)
 
+
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
 
