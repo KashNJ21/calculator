@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
         test_data = CsvReader("Tests/Data/mean.csv").data
         for row in test_data:
            result = int(row['Result'])
-           self.assertEqual(self.statistics.mean(row['Value 1'], row['Value 2'], row['Value 3']), result)
+           self.assertEqual(self.statistics.mean(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4']), result)
            self.assertEqual(self.statistics.result, result)
 
     def test_median(self):
@@ -28,6 +28,13 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
            result = [float(row['Result'])]
            self.assertAlmostEqual(self.statistics.mode(row['Value 1'], row['Value 2'], row['Value 3'], row['Value 4']), result)
+           self.assertAlmostEqual(self.statistics.result, result)
+
+    def test__pop_variance(self):
+        test_data = CsvReader("Tests/Data/pop_variance.csv").data
+        for row in test_data:
+           result = float(row['Result'])
+           self.assertAlmostEqual(self.statistics.pop_variance(row['Value 1'], row['Value 2'], row['Value 3']), result)
            self.assertAlmostEqual(self.statistics.result, result)
 
     def test_results_property(self):
