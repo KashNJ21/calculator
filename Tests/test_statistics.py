@@ -37,6 +37,12 @@ class MyTestCase(unittest.TestCase):
            self.assertAlmostEqual(self.statistics.pop_variance(row['Value 1'], row['Value 2'], row['Value 3']), result)
            self.assertAlmostEqual(self.statistics.result, result)
 
+    def test_p_value(self):
+        test_data = CsvReader('Tests/Data/just_age.csv').data
+        test_result = 
+
+
+
     def test_results_property(self):
         self.assertEqual(self.statistics.result, 0)
 
