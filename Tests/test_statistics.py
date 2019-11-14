@@ -37,6 +37,14 @@ class MyTestCase(unittest.TestCase):
            self.assertAlmostEqual(self.statistics.pop_variance(row['Value 1'], row['Value 2'], row['Value 3']), result)
            self.assertAlmostEqual(self.statistics.result, result)
 
+    def test__std_dev(self):
+        test_data = CsvReader("Tests/Data/std_dev.csv").data
+        for row in test_data:
+           result = float(row['Result'])
+           self.assertAlmostEqual(self.statistics.std_dev(row['Value 1'], row['Value 2'], row['Value 3']), result)
+           self.assertAlmostEqual(self.statistics.result, result)
+
+
     def test_results_property(self):
         self.assertEqual(self.statistics.result, 0)
 

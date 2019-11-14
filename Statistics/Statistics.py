@@ -3,6 +3,7 @@ from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.Population_Variance import variance
+from Statistics.Std_dev import std_dev
 class Statistics(Calculator):
     result = 0
 
@@ -25,4 +26,7 @@ class Statistics(Calculator):
         self.result = variance(a, b, c)
         return self.result
 
+    def std_dev(self, a, b, c):
+        self.result = std_dev(a, b, c)
+        return self.result
 
