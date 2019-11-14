@@ -3,6 +3,8 @@ from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.Population_Variance import variance
+from Statistics.PopulationMean import population_mean
+from Statistics.Sample_Standard_Deviation import sample_st_deviation
 class Statistics(Calculator):
     result = 0
 
@@ -25,4 +27,11 @@ class Statistics(Calculator):
         self.result = variance(a, b, c)
         return self.result
 
+    def population_mean(self):
+        self.result = population_mean(self.data)
+        return self.result
+
+    def sample_st_deviation(self):
+        self.result = sample_st_deviation(self.data)
+        return self.result
 
