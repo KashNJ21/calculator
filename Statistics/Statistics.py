@@ -5,6 +5,7 @@ from Statistics.Mode import mode
 from Statistics.Population_Variance import variance
 from Statistics.Std_dev import std_dev
 from Statistics.Z_score import z_score
+from Statistics.Standardized_socre import standardized_score
 class Statistics(Calculator):
     result = 0
 
@@ -33,4 +34,8 @@ class Statistics(Calculator):
 
     def z_score(self, a, b, c):
         self.result = z_score(a, b, c)
+        return self.result
+
+    def std_score(self, a, b, c):
+        self.result =standardized_score (a, b, c)
         return self.result
