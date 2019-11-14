@@ -39,7 +39,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_p_value(self):
         test_data = CsvReader('Tests/Data/just_age.csv').data
-        test_result = 
+        test_result =
 
 
 

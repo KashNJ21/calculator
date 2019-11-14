@@ -4,8 +4,8 @@ from Calculator.Division import division
 
 def proportion(data):
     p = len(data)
-    height = 0
+    age = 0
     for values in data:
-        if height > 64:
-            addition(height)
+        if age > 57:
+            addition(age)
     return division(values, p)
