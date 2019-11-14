@@ -6,6 +6,6 @@ def proportion(data):
     p = len(data)
     age = 0
     for values in data:
-        if age > 57:
+        if age > 62:
             addition(age)
     return division(values, p)

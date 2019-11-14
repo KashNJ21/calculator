@@ -5,8 +5,10 @@ from Calculator.Division import division
 
 
 def z_score(data):
-    x = 64
+    x = 62
     u = population_mean(data)
     sample_sd = sample_st_deviation(data)
     y = subtraction(x, u)
     return division(sample_sd, y)
+
+#this may not work

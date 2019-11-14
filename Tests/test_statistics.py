@@ -39,8 +39,31 @@ class MyTestCase(unittest.TestCase):
 
     def test_p_value(self):
         test_data = CsvReader('Tests/Data/just_age.csv').data
-        test_result =
+        test_result = CsvReader('Test/Data/Age_Results.csv').data
+        for row in test_data:
+            self.assertEqual(self.statistics.p_value, float(row['PValue']))
+            self.assertEqual(self.statistics.result, test_result(row['PValue']))
 
+    def sample_st_deviation(self):
+        test_data = CsvReader('Tests/Data/just_age.csv').data
+        test_result = CsvReader('Test/Data/Age_Results.csv').data
+        for row in test_data:
+            self.assertEqual(self.statistics.p_value, float(row['Sample SD']))
+            self.assertEqual(self.statistics.result, test_result(row['Sample SD']))
+
+    def pop_standard_dev(self):
+        test_data = CsvReader('Tests/Data/just_age.csv').data
+        test_result = CsvReader('Test/Data/Age_Results.csv').data
+        for row in test_data:
+            self.assertEqual(self.statistics.p_value, float(row['Sample SD']))
+            self.assertEqual(self.statistics.result, test_result(row['Sample SD']))
+
+    def proportion(self):
+        test_data = CsvReader('Tests/Data/just_age.csv').data
+        test_result = CsvReader('Test/Data/Age_Results.csv').data
+        for row in test_data:
+            self.assertEqual(self.statistics.p_value, float(row['Proportion']))
+            self.assertEqual(self.statistics.result, test_result(row['Proportion']))
 
 
     def test_results_property(self):
