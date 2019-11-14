@@ -58,6 +58,13 @@ class MyTestCase(unittest.TestCase):
            self.assertAlmostEqual(self.statistics.std_score(row['Value 1'], row['Value 2'], row['Value 3']), result)
            self.assertAlmostEqual(self.statistics.result, result)
 
+    def corr_coef(self):
+        test_data = CsvReader("Tests/Data/corr_coef.csv").data
+        for row in test_data:
+           result = [float(row['Result'])]
+           self.assertAlmostEqual(self.statistics.corr_coeff(row['Value 1'], row['Value 2'], row['Value 3'],row['Value 4'],row['Value 5'],row['Value 6']), result)
+           self.assertAlmostEqual(self.statistics.result, result)
+
     def test_results_property(self):
         self.assertEqual(self.statistics.result, 0)
 

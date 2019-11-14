@@ -6,6 +6,7 @@ from Statistics.Population_Variance import variance
 from Statistics.Std_dev import std_dev
 from Statistics.Z_score import z_score
 from Statistics.Standardized_socre import standardized_score
+from Statistics.corr_coef import corr_coef
 class Statistics(Calculator):
     result = 0
 
@@ -38,4 +39,8 @@ class Statistics(Calculator):
 
     def std_score(self, a, b, c):
         self.result =standardized_score (a, b, c)
+        return self.result
+
+    def corr_coeff(self, a, b, c, d, e, f):
+        self.result =corr_coef (a, b, c, d, e, f)
         return self.result
