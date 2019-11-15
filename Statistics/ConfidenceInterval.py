@@ -8,7 +8,7 @@ from Calculator.Addition import addition
 
 
 def confidence_interval(data):
-    z_value = 1.960
+    z_value = 1.05
     mean =sample_mean(data)
     sd = pop_standard_dev(data)
     x = len(data)
